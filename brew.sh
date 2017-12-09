@@ -44,7 +44,7 @@ sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 chsh -s /usr/local/bin/bash
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
+brew install wget
 
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
@@ -63,7 +63,7 @@ LINE='eval "$(rbenv init -)"'
 grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
+brew install vim --with-override-system-vi 
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 #brew install homebrew/dupes/screen
@@ -141,21 +141,21 @@ brew tap caskroom/versions
 
 # Core casks
 #brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" java
-brew cask install --appdir="~/Applications" xquartz
+brew cask install iterm2
+brew cask install java
+brew cask install xquartz
 
 # Development tool casks
 #brew cask install --appdir="/Applications" sublime-text
 #brew cask install --appdir="/Applications" atom
-brew cask install --appdir="/Applications" virtualbox
-brew cask install --appdir="/Applications" vagrant
+brew cask install virtualbox
+brew cask install vagrant
 #brew cask install --appdir="/Applications" macdown
 
 # Misc casks
-brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" firefox
-brew cask install --appdir="/Applications" skype
+brew cask install google-chrome
+brew cask install firefox
+brew cask install skype
 #brew cask install --appdir="/Applications" slack
 #brew cask install --appdir="/Applications" dropbox
 #brew cask install --appdir="/Applications" evernote
